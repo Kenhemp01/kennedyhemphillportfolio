@@ -1,0 +1,19 @@
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+
+body.page-loaded .page-transition {
+  opacity: 1;
+}
+
+.page-transition.fade-out {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+
+body:not(.page-loaded) .page-transition {
+  opacity: 0;
+}
