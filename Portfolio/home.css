@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Rubik', sans-serif;
+
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1001;
+  background-color: black;
+
+}
+
+.logo {
+  font-size: 3rem;
+  color: #c49c4dff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3 ease;
+  border-bottom: 3px solid transparent;
+
+}
+
+nav a:hover,
+nav a.active {
+  color: #c49c4dff;
+  border-bottom: 3px solid #c49c4dff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #c49c4dff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: black;
+
+}
+
+.home .home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2rem;
+}
+
+span {
+  color: #c49c4dff;
+}
+
+.home-content h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.home-img {
+  border-radius: 50%;
+
+}
+
+.home-img img {
+
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #c49c4dff;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+}
+
+
+.social-icons a {
+  display: inline flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #c49c4dff;
+  font-size: 2rem;
+  border-radius: 30%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #c49c4dff;
+
+}
+
+.social-icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #c49c4dff;
+  box-shadow: 0 0 25px #c49c4dff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: #c49c4dff;
+  letter-spacing: 0.4rem;
+  font-weight: 400;
+  border: 2px solid #c49c4dff;
+  transition: 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn:hover {
+  transform: scale3d(1.03);
+  background-color: #c49c4dff;
+  color: black;
+  box-shadow: 0 0 25px #c49c4dff;
+}
+
+.typing-text {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span {
+  position: relative;
+}
+
+
+
+.typing-text span::before,
+.typing-text span::after {
+  display: none;
+}
+
+#typed-text {
+  color: #c49c4dff;
+  text-shadow: 0 0 8px #c49c4dff;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #c49c4dff;
+  }
+}
+
+
+@media (max-width: 995px) {
+
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 1001;
+  }
+
+
+  .logo {
+    font-size: 3rem;
+    color: #c49c4dff;
+    z-index: 1101;
+  }
+
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1100;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #c49c4dff;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    transition: 0.3s ease;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: #c49c4dff;
+    border-bottom: none;
+  }
+
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 4rem;
+    margin: 4rem 2rem;
+    padding-top: 12rem;
+  }
+
+  .home-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+    height: 70vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .typing-text {
+    font-size: 2.5rem;
+  }
+}
+
+
+header.nav-open .hamburger {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+}
+
+header.nav-open .logo {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+  z-index: 1100;
+}
+
+header.nav-open nav {
+  z-index: 100;
+}
