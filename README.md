@@ -1,2 +1,0 @@
-# kennedyhemphillportfolio
-My Portfolio Website
